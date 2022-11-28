@@ -1,8 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Inspiration&family=Raleway:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400&family=Inspiration&family=Raleway:ital,wght@1,600&display=swap');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
+.nav-bar {
+  font-weight: bold;
+  float: left;
+  margin-left: 20px;
+  font-family: 'Gentium Book Plus', serif;
+}
+
+.main-bg {
+  height: 300px;
+  width: 100vw ;
+  overflow: hidden;
+  background-image: url('/public/bg.jpg');
+  background-size: cover;
+  background-position: -100px center;
+  margin-bottom: 20px;
+}
+
+.body-row {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+img{
+  margin-bottom: 10px;
+}
+
+.App-logo { 
   height: 40vmin;
   pointer-events: none;
 }
