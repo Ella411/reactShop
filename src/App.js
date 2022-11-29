@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Container, Nav, Navbar, Row, Col} from 'react-bootstrap';
+import data from './data.js';
 
 function App() {
+
+  let [jewerly] = useState(data);
+
   return (
     <div className="App">
 
@@ -23,18 +28,21 @@ function App() {
         <Col sm>
                    {/* public 폴더 이미지쓰는 권장 방식 */}
           <img src={process.env.PUBLIC_URL + '/1.jpg'} width="80%"/>
-          <h5>체인</h5>
-          <p>₩840,000<br></br>아르젠토 오로 지알로</p>
+          <h5>{jewerly[0].title}</h5>
+          <p>{jewerly[0].content}</p>
+          <p>{jewerly[0].material}</p>
         </Col>
         <Col sm>
           <img src={process.env.PUBLIC_URL + '/2.jpg'} width="80%"/>
-          <h5>에센셜</h5>
-          <p>₩1,165,000<br></br> 실버</p>
+          <h5>상품명</h5>
+          <p>가격</p>
+          <p>소재</p>
         </Col>
         <Col sm>
           <img src={process.env.PUBLIC_URL + '/3.jpg'} width="80%"/>
-          <h5>볼트</h5>
-          <p>₩820,000<br></br>옐로우 골드</p>
+          <h5>상품명</h5>
+          <p>가격</p>
+          <p>소재</p>
         </Col>
       </Row>
     </Container>
