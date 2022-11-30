@@ -4,6 +4,15 @@
 .App {
   text-align: center;
 }
+.link {
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.link:hover{
+  color: dimgray;
+}
 
 .nav-bar {
   font-weight: bold;
