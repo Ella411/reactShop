@@ -16,9 +16,13 @@
 
 .nav-bar {
   font-weight: bold;
-  float: left;
-  margin-left: 20px;
   font-family: 'Gentium Book Plus', serif;
+
+}
+
+.nav-container {
+  float: left;
+
 }
 
 .main-bg {
