@@ -8,7 +8,7 @@ import Detail from './pages/Detail';
 
 function App() {
 
-  let [jewerly] = useState(data);
+  let [jewerly, jewerlySort] = useState(data);
   let navigate = useNavigate();
 
   return (
@@ -22,9 +22,14 @@ function App() {
             </Nav>
           </Container>
         </Navbar>
+
+
+
+
+
       <Routes>
         <Route path='/' element={ <Main jewerly={jewerly}/> }/>
-        <Route path='/detail' element={ <Detail/> }/>
+        <Route path='/detail' element={ <Detail jewerly={jewerly}/> }/>
 
         {/* Nested Routes */}
         <Route path='/about' element={ <About/> }>
@@ -37,11 +42,9 @@ function App() {
           <Route path='two' element={ <div>생일기념 쿠폰받기</div> }/>
         </Route>
 
-
-
-       
-
         <Route path='*' element={ <div>404</div> }/>
+
+        <Route path='/detail/:id' element={ <Detail jewerly={jewerly}/> }/>
 
       </Routes>
     </div>
@@ -56,6 +59,7 @@ function Card(props){
       <p>{props.jewerly.price}</p>
       <p>{props.jewerly.material}</p>
     </Col>
+
   )
 }
 
@@ -63,6 +67,7 @@ function Main(props){
   return(
       <>
       <div className='main-bg'></div>
+
       <Container>
         <Row className='body-row'>
           {
@@ -74,7 +79,10 @@ function Main(props){
           }
         </Row> 
       </Container>
+
       </>
+
+
   )
 }
 
