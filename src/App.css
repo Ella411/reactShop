@@ -22,8 +22,21 @@
 
 .nav-container {
   float: left;
-
 }
+
+/* 애니메이션 동작 전 */
+.start {
+  opacity: 0;
+}
+
+/* 애니메이션 동작 후*/
+.end{
+  opacity: 1;
+  transition: opacity 0.5s;
+  /* transition : opacity가 변경될 때 0.5초에 걸쳐서 변경해주세요 */
+}
+
+
 
 .main-bg {
   height: 300px;
